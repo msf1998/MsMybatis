@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 暂时仅支持Mysql -->
+    <environments default="mysql">
+        <environment id="mysql">
+            <!-- 暂不支持事务 -->
+            <transactionManager type="jdbc"></transactionManager>
+            <!-- 暂不支持数据库连接池 -->
+            <dataSource type="pooled">
+                <property name="driver" value="com.mysql.jdbc.Driver1"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test1"/>
+                <property name="user" value="root1"/>
+                <property name="password" value="1234561"/>
+            </dataSource>
+        </environment>
+    </environments>
+</configuration>
